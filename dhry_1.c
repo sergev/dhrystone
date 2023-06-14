@@ -242,10 +242,8 @@ int main ()
 }
 
 
-void Proc_1 (Ptr_Val_Par)
+void Proc_1 (Rec_Pointer Ptr_Val_Par)
 /******************/
-
-  Rec_Pointer Ptr_Val_Par;
     /* executed once */
 {
   Rec_Pointer Next_Record = Ptr_Val_Par->Ptr_Comp;
@@ -276,12 +274,10 @@ void Proc_1 (Ptr_Val_Par)
 } /* Proc_1 */
 
 
-void Proc_2 (Int_Par_Ref)
+void Proc_2 (One_Fifty *Int_Par_Ref)
 /******************/
     /* executed once */
     /* *Int_Par_Ref == 1, becomes 4 */
-
-One_Fifty   *Int_Par_Ref;
 {
   One_Fifty  Int_Loc;
   Enumeration   Enum_Loc;
@@ -299,13 +295,10 @@ One_Fifty   *Int_Par_Ref;
 } /* Proc_2 */
 
 
-void Proc_3 (Ptr_Ref_Par)
+void Proc_3 (Rec_Pointer *Ptr_Ref_Par)
 /******************/
     /* executed once */
     /* Ptr_Ref_Par becomes Ptr_Glob */
-
-Rec_Pointer *Ptr_Ref_Par;
-
 {
   if (Ptr_Glob != 0)
     /* then, executed */

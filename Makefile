@@ -1,4 +1,4 @@
-CFLAGS  = -O3 -DNRUNS=100000000 -Wall -Werror
+CFLAGS  = -O3 -DNRUNS=1000000000 -Wall -Werror
 
 OBJS    = dhry_1.o dhry_2.o
 
